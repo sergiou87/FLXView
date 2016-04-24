@@ -14,7 +14,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (readwrite, nonatomic, assign) FLXMargins flx_margins;
 
+@property (readwrite, nonatomic, assign) CGFloat flx_marginLeft;
+@property (readwrite, nonatomic, assign) CGFloat flx_marginRight;
+@property (readwrite, nonatomic, assign) CGFloat flx_marginTop;
+@property (readwrite, nonatomic, assign) CGFloat flx_marginBottom;
+
 @property (readwrite, nonatomic, assign) FLXSelfAlignment flx_selfAlignment;
+
+- (void)flx_setMarginValue:(CGFloat)margin; // Sets all 4 margins with the same value
 
 @end
 
