@@ -20,7 +20,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (readwrite, nonatomic, assign) FLXPadding padding;
 
+@property (readwrite, nonatomic, assign) CGFloat paddingLeft;
+@property (readwrite, nonatomic, assign) CGFloat paddingRight;
+@property (readwrite, nonatomic, assign) CGFloat paddingTop;
+@property (readwrite, nonatomic, assign) CGFloat paddingBottom;
+
 @property (readwrite, nonatomic, assign) BOOL wrap;
+
+- (void)setPaddingValue:(CGFloat)padding; // Sets all 4 paddings with the same value
 
 @end
 

@@ -55,6 +55,50 @@ NS_ASSUME_NONNULL_BEGIN
     [self.superview setNeedsLayout];
 }
 
+- (void)flx_setMarginValue:(CGFloat)margin {
+    self.flx_margins = FLXMarginsMake(margin, margin, margin, margin);
+}
+
+- (CGFloat)flx_marginLeft {
+    return self.flx_margins.left;
+}
+
+- (void)setFlx_marginLeft:(CGFloat)margin {
+    FLXMargins margins = self.flx_margins;
+    margins.left = margin;
+    self.flx_margins = margins;
+}
+
+- (CGFloat)flx_marginRight {
+    return self.flx_margins.right;
+}
+
+- (void)setFlx_marginRight:(CGFloat)margin {
+    FLXMargins margins = self.flx_margins;
+    margins.right = margin;
+    self.flx_margins = margins;
+}
+
+- (CGFloat)flx_marginTop {
+    return self.flx_margins.top;
+}
+
+- (void)setFlx_marginTop:(CGFloat)margin {
+    FLXMargins margins = self.flx_margins;
+    margins.top = margin;
+    self.flx_margins = margins;
+}
+
+- (CGFloat)flx_marginBottom {
+    return self.flx_margins.bottom;
+}
+
+- (void)setFlx_marginBottom:(CGFloat)margin {
+    FLXMargins margins = self.flx_margins;
+    margins.bottom = margin;
+    self.flx_margins = margins;
+}
+
 - (FLXSelfAlignment)flx_selfAlignment {
     return self.flx_data.selfAlignment;
 }

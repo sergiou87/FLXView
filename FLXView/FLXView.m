@@ -45,6 +45,50 @@ NS_ASSUME_NONNULL_BEGIN
     [self setNeedsLayout];
 }
 
+- (void)setPaddingValue:(CGFloat)padding {
+    self.padding = FLXPaddingMake(padding, padding, padding, padding);
+}
+
+- (CGFloat)paddingLeft {
+    return self.padding.left;
+}
+
+- (void)setPaddingLeft:(CGFloat)left {
+    FLXPadding padding = self.padding;
+    padding.left = left;
+    self.padding = padding;
+}
+
+- (CGFloat)paddingRight {
+    return self.padding.right;
+}
+
+- (void)setPaddingRight:(CGFloat)right {
+    FLXPadding padding = self.padding;
+    padding.right = right;
+    self.padding = padding;
+}
+
+- (CGFloat)paddingTop {
+    return self.padding.top;
+}
+
+- (void)setPaddingTop:(CGFloat)top {
+    FLXPadding padding = self.padding;
+    padding.top = top;
+    self.padding = padding;
+}
+
+- (CGFloat)paddingBottom {
+    return self.padding.bottom;
+}
+
+- (void)setPaddingBottom:(CGFloat)bottom {
+    FLXPadding padding = self.padding;
+    padding.bottom = bottom;
+    self.padding = padding;
+}
+
 - (void)setWrap:(BOOL)wrap {
     _wrap = wrap;
 
